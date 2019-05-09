@@ -1,0 +1,49 @@
+<button class="project-entry {% if include.is-game %}game-entry{% endif %}">
+    <img class="project-thumb" src="{{ project.img }}" alt="{{ project.name }}">
+    <div class="project-caption">
+        {{ project.name }}
+        {{ is-game }}
+    </div>
+</button>
+<div class="project-details-container {% if include.is-game %}game-entry{% endif %}">
+    <div class="modal-darken"></div>
+    <div class="project-details container-width">
+        <div class="header">
+            <h2 class="project-title">{{ project.name }}</h2>
+            <button class="button close-button">×</button>
+        </div>
+        <img class="project-detail-img" src="{{ project.img }}" alt="Image of project">
+        <div class="project-tags">
+            {% for tag in project.tags %}
+                <span class="project-tag">{{ tag }}</span>
+            {% endfor %}
+        </div>
+        <p class="project-description">{{ project.description }}</p> 
+        <ul class="project-details-footer">
+            {% if project.repo %}
+                <li class="button btn-github">
+                    <a href="{{ project.repo }}">
+                        <i class="fab fa-github"></i> View repo
+                    </a>
+                </li>
+            {% endif %}
+            {% if project.project-page %}
+                <li class="button btn-project-page">
+                    <a href="{{ project.project-page }}">
+                        <i class="fas fa-link"></i> View project page
+                    </a>
+                </li>
+            {% endif %}
+            {% if project.itch-io %}
+                <li class="button btn-itch-io fancy-btn">
+                    <a href="{{ project.itch-io }}">
+                        <i class="fab fa-itch-io"></i> Play on Itch.io
+                    </a>
+                </li>
+            {% endif %}
+            {% if is-game == true %}
+                {{ is-game }}
+            {% endif %}
+        </ul>
+    </div>
+</div>

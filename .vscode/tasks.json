@@ -1,0 +1,22 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Start Jekyll serve and Browsersync",
+            "type": "shell",
+            "dependsOn": ["Serve Jekyll", "Start Browsersync"]
+        },
+        {
+            "label": "Serve Jekyll",
+            "type": "shell",
+            "command": "bundle exec jekyll serve"
+        },
+        {
+            "label": "Start Browsersync",
+            "type": "shell",
+            "command": "browser-sync start --watch -p localhost:4000 --files *"
+        },
+    ]
+}

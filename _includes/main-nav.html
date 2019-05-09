@@ -1,0 +1,25 @@
+<div class="nav-button">
+    <a href="#" class="nav-option mobile-only button">
+        <i class="fas fa-bars"></i>
+    </a>
+</div>
+<nav class="main-nav">
+    <ul class="nav-list button-box">
+        {% for item in site.data.main-nav %}
+            <li class="button nav-option {% if page.url == item.link %} selected {% endif %}" >
+                <a href="{{ item.link }}">
+                {{ item.name }}</a>
+            </li>
+        {% endfor %}
+        <li class="button nav-option social-icon github">
+            <a href="https://github.com/neptunianeclipse" title="Github">
+                <i class="fab fa-github"></i>
+            </a>
+        </li>
+        <li class="button nav-option social-icon linkedin" >
+            <a href="https://www.linkedin.com/in/cameron-palmer/" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </li>
+    </ul>
+</nav> 

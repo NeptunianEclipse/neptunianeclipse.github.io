@@ -1,0 +1,66 @@
+// ------------------------------
+// NUMBERS
+// ------------------------------
+
+// Responsive breakpoints
+$tiny-mobile-width: 400px;
+$mobile-width: 860px;
+$compact-width: 1150px;
+
+// Container
+$container-padding: 30px;
+$container-padding-compact: 15px;
+$container-width: 1200px;
+
+// Buttons
+$button-depth: 7px;
+
+// ------------------------------
+// FONTS
+// ------------------------------
+
+$font-family: 'Roboto', 'Open Sans', Arial, sans-serif;
+
+// ------------------------------
+// COLORS
+// ------------------------------
+
+// Primary colours used throughout the site
+$main-color: rgb(57, 121, 218);
+$main-color-light: rgb(36, 165, 240);
+
+$background-color: rgb(240, 240, 240);
+
+// Links
+$link-color: $main-color;
+$link-visited-color: $link-color;
+
+// Buttons
+$button-color: rgb(202, 202, 202);
+$button-hover-color: lighten($button-color, 7);
+$button-selected-color: $main-color;
+$button-selected-hover-color: lighten($main-color, 7);
+$button-active-color: darken($button-color, 7);
+$button-selected-active-color: darken($button-selected-color, 7);
+
+$fancy-button-color: rgb(17, 180, 172);
+
+// ------------------------------
+// COLORS - DARK
+// ------------------------------
+
+// Backgrounds
+$dark-background-color: rgb(71, 71, 71);
+$dark-content-background-color: rgb(53, 53, 53);
+
+// Buttons
+$dark-button-color: rgb(120, 120, 120);
+$dark-button-hover-color: lighten($dark-button-color, 7);
+$dark-button-selected-color: $main-color;
+$dark-button-selected-hover-color: lighten($main-color, 7);
+$dark-button-active-color: darken($dark-button-color, 7);
+$dark-button-selected-active-color: darken($dark-button-selected-color, 7);
+
+$dark-fancy-button-color: $fancy-button-color;
+$dark-fancy-button-hover-color: lighten($dark-fancy-button-color, 7);
+$dark-fancy-button-active-color: darken($dark-fancy-button-color, 7);

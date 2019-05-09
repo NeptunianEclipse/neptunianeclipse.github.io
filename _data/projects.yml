@@ -1,0 +1,36 @@
+- name: Evolutionary Simulation
+  img: /assets/img/thumb-evo-sim.png
+  description: This is a simulation written in HTML5 and JavaScript that uses genetic algorithms and neural networks to simulate a population of agents (you could imagine them as living cells, animals, robots etc.), which compete for survival. Each agent must eat food to avoid starving, but there is a limited amount of food available at any time. After a certain amount of time has passed, the simulation will advance to the next generation, in which a new population of agents is created from the combination and mutation of the genetic code of the previous population. The better an agent performs (the more food it collects), the more likely it is to be selected for breeding. This simulates natural selection, and results in the agents of each successive population performing better than the last.
+  repo: https://github.com/NeptunianEclipse/ai-evolutionary-simulation
+  project-page: https://neptunianeclipse.github.io/ai-evolutionary-simulation
+  tags: ['javascript', 'machine learning']
+
+- name: Stardew Valley Assistant
+  img: /assets/img/thumb-stardew.png
+  description: The aim of Stardew Valley assistant is to be a useful companion tool for players of Stardew Valley.
+  repo: https://github.com/NeptunianEclipse/stardew-valley-assistant
+  project-page: https://neptunianeclipse.github.io/stardew-valley-assistant/
+  tags: ['html5', 'javascript', 'web']
+
+- name: Personal Website
+  img: /assets/img/thumb-personal-site.png
+  description: This very website.
+  repo: https://github.com/NeptunianEclipse/personal-website
+  project-page: "/"
+  tags: ['html5', 'javascript', 'sass', 'jekyll', 'liquid']
+
+- name: Procedural Terrain
+  img: /assets/img/thumb-terrain.png
+  description: This is an OpenSCAD script that procedurally generates a random block of terrain, which includes trees, grass, water, cliffes, beaches and mountains. The script uses the diamond-square algorithm for generating the height map, then goes through several passes to add colour and objects such as trees.
+  repo: https://github.com/NeptunianEclipse/procedural-terrain
+  tags: ['openscad', 'procedural', 'mesh generation']
+
+- name: The Forest
+  description: A Python script that simulates a small forest inhabited by lumberjacks and bears.
+  repo: https://github.com/NeptunianEclipse/the-forest
+  tags: ['python', 'script', 'simulation']
+
+- name: File Allocation Table Simulation
+  description: This is a simple simulator of a File Allocation Table. Files can be added and deleted from a simulated directory, and allocated sectors in a FAT. The directory and FAT are saved to data files after each change.
+  repo: https://github.com/NeptunianEclipse/file-allocation-table-sim
+  tags: ['c', 'simulation']

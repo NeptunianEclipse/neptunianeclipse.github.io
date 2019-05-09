@@ -1,0 +1,100 @@
+@import 'vars';
+
+body.games {
+    .container {
+        background-color: $dark-background-color;
+        background-image: url('/assets/img/background-dark.svg');
+    }
+
+    .nav-option {
+        box-shadow: 0 $button-depth 0 darken(rgb(139, 139, 139), $button-depth);
+    }
+
+    .nav-option a {
+        color: white;
+    }
+
+    .container-inner {
+        background-color: $dark-content-background-color;
+        box-shadow: 0 10px 0px darken($dark-content-background-color, 15);
+        color: white;
+    }
+
+    .button-box {
+        background-color: $dark-background-color;
+    }
+
+    .button {
+        background-color: $dark-button-color;
+        transition: all 0.1s ease;
+        transition-property: background-color top box-shadow;
+        top: 0;
+        position: relative;
+        box-shadow: 0 $button-depth 0 darken($dark-button-color, $button-depth);
+        color: white;
+
+        a { 
+            color: white;
+        }
+    }
+    
+    .button:hover {
+        background-color: $dark-button-hover-color;
+    }
+    
+    .button:active {
+        background-color: $dark-button-active-color;
+        box-shadow: 0 0 0 darken($dark-button-color, $button-depth);
+    }
+    
+    .button.selected {
+        background-color: $dark-button-selected-color;
+        box-shadow: 0 0 0 darken($dark-button-selected-color, $button-depth);
+    }
+    
+    .button.selected:hover {
+        background-color: $dark-button-selected-hover-color;
+    }
+    
+    .button.selected:active {
+        background-color: $dark-button-selected-active-color;
+    }
+    
+    .button:active, .button.selected {
+        top: $button-depth;
+    }
+
+    .button.fancy-btn {
+        background-color: $dark-fancy-button-color;
+        box-shadow: 0 $button-depth 0 darken($dark-fancy-button-color, $button-depth);
+    }
+
+    .button.fancy-btn:hover {
+        background-color: $dark-fancy-button-hover-color;
+    }
+    
+    .button.fancy-btn:active {
+        background-color: $dark-fancy-button-active-color;
+        box-shadow: 0 0 0 darken($dark-fancy-button-color, $button-depth);
+    }
+
+    .button.fancy-btn {
+        background-color: $dark-fancy-button-color;
+        box-shadow: 0 $button-depth 0 darken($dark-fancy-button-color, $button-depth);
+    }
+
+    .project-details {
+        background-color: $dark-content-background-color;
+    }
+}
+
+.games-header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    h1 {
+        flex-grow: 1;
+    }
+}

@@ -1,0 +1,10 @@
+- name: '<i class="fas fa-home"></i> Home'
+  link: /
+- name: '<i class="fas fa-th"></i> Projects'
+  link: /projects/
+- name: '<i class="fas fa-gamepad"></i> Games'
+  link: /games/
+- name: '<i class="fas fa-pencil-alt"></i> Blog'
+  link: /blog/
+- name: '<i class="fas fa-user"></i> About Me'
+  link: /about-me/

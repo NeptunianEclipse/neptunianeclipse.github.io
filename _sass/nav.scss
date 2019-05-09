@@ -1,0 +1,131 @@
+@import 'vars';
+
+.main-nav {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .nav-list {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 5px 5px 12px 5px;
+        border-radius: 5px;
+        width: 100%;
+        background-color: white;
+    }
+}
+
+.nav-button {
+    .nav-option.selected {
+        background-color: white;
+    }
+
+    .nav-option.selected:hover {
+        background-color: $button-hover-color;
+    }
+}
+
+.nav-option.selected a {    
+    color: white;
+}
+
+.social-icon a {
+    font-size: 1.2em;
+}
+
+// ------------------------------
+// COMPACT
+// ------------------------------
+
+@media(max-width: $compact-width) {
+    .nav-option {
+        margin: 0 3px 0 3px;
+        font-size: 0.8em;
+
+        a {
+            padding: 4px 9px 4px 9px;
+        }
+    }
+
+    .nav-option.social-icon {
+        font-size: 0.6em;
+    }
+}
+
+// ------------------------------
+// MOBILE
+// ------------------------------
+
+@media(max-width: $mobile-width) {
+    .nav-button {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        padding: 0;
+        width: 50px;
+        height: 50px - $button-depth;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 50px - $button-depth;
+        font-size: 25px;
+
+        .nav-option {
+            width: 100%;
+            height: 100%;
+            color: black;
+            background-color: white;
+        }
+     }
+
+    .main-nav .nav-list {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-areas:
+        "a b"
+        "a b"
+        "a b"
+        "a c"
+        "a c";
+        grid-template-columns: 100fr auto;
+
+        max-height: 0;
+        transition: max-height 0.3s;
+        overflow: hidden;
+        border-radius: 0;
+
+        padding: 0 $container-padding 0 $container-padding;
+        margin: 40px (-$container-padding) 0 (-$container-padding);
+
+        .button {
+            box-shadow: none;
+            margin-top: 5px;
+            font-size: 1em;
+        }
+
+        .button:active, .button.selected {
+            top: 0;
+        }
+    }
+
+    .nav-list.expanded {
+        max-height: 220px;
+        padding-top: 5px;
+        padding-bottom: 10px;
+    }
+
+    .nav-option.github {
+        grid-area: b;
+    }
+
+    .nav-option.linkedin {
+        grid-area: c;
+    }
+
+}
+
+@media(max-width: $tiny-mobile-width) {
+    .nav-button {
+        right: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+# Site variables
+title: Cameron Palmer
+email: cameron.a.palmer.nz@gmail.com
+description: >-
+  Cameron Palmer's personal website
+baseurl: ""
+url: ""
+github_username:  NeptunianEclipse
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed

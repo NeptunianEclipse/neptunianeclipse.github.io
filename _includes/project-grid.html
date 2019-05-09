@@ -1,0 +1,8 @@
+<div class="project-grid">
+    {% for project in include.source %}
+        {% include project-entry.html is-game=false %}
+    {% endfor %}
+    {% for project in site.data.games %}
+        {% include project-entry.html is-game=true %}
+    {% endfor %}
+</div>

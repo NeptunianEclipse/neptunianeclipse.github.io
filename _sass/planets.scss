@@ -1,0 +1,256 @@
+// ------------------------------
+// GENERAL
+// ------------------------------
+
+#planets-container {
+    position: relative;
+    height: 460px;
+    overflow: hidden;
+    transition: height 0.5s;
+    background-image: radial-gradient(circle, rgb(27, 46, 82) 30%, rgba(0, 0, 0, 0) 100%);
+    margin-top: -20px;
+}
+
+#planets-container.expanded {
+    height: 860px;
+
+    .planets-root {
+        bottom: 400px;
+    }
+}
+
+.planets-root {
+    width: 0;
+    height: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transition: bottom 0.5s;
+}
+
+.planet {
+    position: absolute;
+    border-radius: 100%;
+    background-color: red;
+    z-index: 1;
+}
+
+.orbit {
+    border: 2px dotted rgba(255, 255, 255, 0.5);
+    position: absolute;
+    border-radius: 50%;
+}
+
+// ------------------------------
+// BACKGROUND GLOW
+// ------------------------------
+
+$glow-size: 185px;
+
+.glow {
+    position: absolute;
+    border-radius: 100%;
+    background-color: rgba(19, 182, 211, 0.281);
+}
+
+.glow-1 {
+    width: $glow-size * 1;
+    height: $glow-size * 1;
+    top: $glow-size * -0.5;
+    left: $glow-size * -0.5;
+}
+
+.glow-2 {
+    width: $glow-size * 2;
+    height: $glow-size * 2;
+    top: $glow-size * -1;
+    left: $glow-size * -1;
+}
+
+.glow-3 {
+    width: $glow-size * 3;
+    height: $glow-size * 3;
+    top: $glow-size * -1.5;
+    left: $glow-size * -1.5;
+}
+
+.glow-4 {
+    width: $glow-size * 4;
+    height: $glow-size * 4;
+    top: $glow-size * -2;
+    left: $glow-size * -2;
+}
+
+// ------------------------------
+// PLANET SPECIFIC STYLING
+// ------------------------------
+
+.planet-sun {
+    background-color: yellow;
+    box-shadow: none !important;
+}
+
+.planet-mercury {
+    background-color: rgb(223, 132, 90);
+}
+
+.planet-venus {
+    background-color: rgb(255, 145, 0);
+}
+
+.planet-earth {
+    background-color: blue;
+}
+
+.planet-mars {
+    background-color: rgba(206, 65, 65, 0.89);
+}
+
+.planet-jupiter {
+    background: rgb(189, 142, 116);
+}
+
+.planet-saturn {
+    background-color: rgb(211, 195, 127);
+}
+
+.planet-saturn::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    top: -24px;
+    left: -24px;
+    border: 10px solid rgb(245, 237, 200);
+    border-radius: 100%;
+    position: absolute;
+}
+
+.planet-uranus {
+    background-color: rgb(166, 243, 239);
+}
+
+.planet-neptune {
+    background-color: rgb(38, 89, 199);
+}
+
+// ------------------------------
+// SIMULATION CONTROLS AND MISC
+// ------------------------------
+
+.planets-maximise-btn {
+    position: absolute;
+    top: -63px;
+    right: 20px;
+    height: 60px;
+    font-size: 25px;
+    border-radius: 10px 10px 0 0;
+    background-color: $background-color;
+    border: none;
+    padding: 10px;
+
+    .minimise {
+        display: none;
+    }
+
+    .button {
+        padding: 10px;
+        font-size: 0.8em;
+        font-family: $font-family;
+    }
+}
+
+.planets-maximise-btn.expanded {
+    .minimise {
+        display: inline;
+    }
+
+    .maximise {
+        display: none;
+    }
+}
+
+.planet-controls {
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: grid;
+    transition: top 0.5s;
+    background-color: white;
+    max-width: 200px;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.349);
+
+    grid-template-areas:
+    "s s"
+    "n t";
+    grid-gap: 10px;
+}
+
+.expanded .planet-controls {
+    display: grid;
+    top: 120px;
+    z-index: 15;
+}
+
+.planet-time-slider {
+    grid-area: s;
+}
+
+.planet-time {
+    grid-area: t;
+    text-align: right;
+}
+
+.planet-time-now-btn {
+    grid-area: n;
+}
+
+.planet-disclaimer {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 0.8em;
+    opacity: 0;
+    transition: opacity 0.5s;
+    max-width: calc(100% - 200px);
+}
+
+.expanded .planet-disclaimer {
+    visibility: visible;
+    opacity: 1;
+}
+
+// ------------------------------
+// MOBILE
+// ------------------------------
+
+@media(max-width: $mobile-width) {
+    #planets-container {
+        height: 220px;
+    }
+
+    #planets-container.expanded {
+        height: 450px;
+    
+        .planets-root {
+            bottom: 210px;
+        }
+    }
+
+    .planets-root {
+        transform: scale(0.5);
+    }
+
+    .orbit {
+        border-width: 4px;
+    }
+}

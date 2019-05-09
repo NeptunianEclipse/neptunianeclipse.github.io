@@ -1,0 +1,27 @@
+.site-footer {
+    padding: 0 10px 0 10px;
+    background-color: $dark-background-color;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    grid-row: 4;
+    margin-top: 30px;
+
+    .button-box {
+        margin: 10px;
+        display: flex;
+    }
+}
+
+.site-footer-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-text {
+    flex-grow: 1;
+    padding: 0;
+    vertical-align: middle;
+    color: lightgrey;
+}

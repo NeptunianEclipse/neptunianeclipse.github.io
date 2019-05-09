@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+@import 'vars';
+
+@import 'buttons';
+@import 'nav';
+@import 'header';
+@import 'footer';
+
+@import 'projects';
+@import 'games';
+@import 'planets';
+@import 'about-me';
+
+
+body {
+    position: relative;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: $font-family;
+}
+
+p {
+    line-height: 165%;
+}
+
+a {
+    text-decoration: none;
+    color: $link-color;
+    transition: opacity 0.1s;
+}
+
+a:visited {
+    color: $link-visited-color;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+label {
+    background-color: lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#background {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background-color: rgb(27, 46, 82);
+    color: rgb(31, 67, 107);
+    font-size: 30px;
+    word-break: break-all;
+    overflow: hidden;
+    max-height: 100%;
+}
+
+.noscroll {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-width {
+    width: calc(100% - 60px);
+    max-width: $container-width;
+    margin: 0 auto 0 auto;
+}
+
+.float-right {
+    float: right;
+}
+
+.spacer {
+    flex-grow: 1;
+}
+
+.container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 140px;
+    box-sizing: border-box;
+}
+
+.container-inner {
+    position: relative;
+    background-color: $background-color;
+    padding: $container-padding;
+    z-index: 2;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0 10px 0px rgb(135, 135, 158);
+}
+
+@media(max-width: $compact-width) {
+    .container-inner {
+        padding: $container-padding-compact;
+    }
+}
+
+@media(min-width: $mobile-width + 1) {
+    .mobile-only {
+        display: none;
+    }
+}
+
+@media(max-width: $mobile-width) {
+    .desktop-only {
+        display: none;
+    }
+
+    .container {
+        padding-top: 100px;
+    }
+
+    .container-width {
+        width: 100%;
+    }
+
+    .container-inner {
+        border-radius: 0;
+    }
+}

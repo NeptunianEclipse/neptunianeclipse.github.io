@@ -1,0 +1,71 @@
+---
+layout: top-level
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{{ page.title }}</title>
+        <script defer src="/assets/js/nav.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="/assets/css/style.css">
+    </head>
+    <body class="{% if page.style %}{{ page.style }}{% endif %}">
+        <div class="container">
+            <header class="site-header container-width">
+                <a href="/" class="site-title-anchor">
+                    <div class="site-title-container">
+                        {% if page.icon-override %}
+                            {% assign icon=page.icon-override %}
+                        {% else %}
+                            {% assign icon="/assets/img/cameron.jpg" %}
+                        {% endif %}
+                        <img class="portrait" src="{{ icon }}" alt="Picture of me">
+                        <span class="site-title">
+                            {% if page.header-override %}
+                                {{ page.header-override }}
+                            {% else %}
+                                Cameron Palmer
+                            {% endif %}
+                        </span>
+                    </div>
+                </a>
+                {% include main-nav.html %}
+            </header>
+            
+            {% if page.above-content %}
+                {% include {{ page.above-content }} %}
+            {% endif %}
+            
+            <main class="content container-inner container-width">
+                {{ content }}
+            </main>
+            <div class="spacer">
+            
+            </div>
+            <footer class="site-footer">
+                <div class="container-width site-footer-flex">
+                    <p class="footer-text">
+                        Designed, developed, and copyrighted© by Cameron Palmer (2019)
+                    </p>
+                    
+                    <ul class="button-box">
+                        <li class="button nav-option social-icon github">
+                            <a href="https://github.com/neptunianeclipse" title="Github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </li>
+                        <li class="button nav-option social-icon linkedin" >
+                            <a href="https://www.linkedin.com/in/cameron-palmer/" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+            </footer>
+        </div>
+    </body>
+</html> 
